@@ -7,6 +7,7 @@ const logger = (req, res, next) => {
 }
 
 const auth = (req, res, next) => {
+    console.log('i am in the auth middleware')
     if(req.cookies?.logged_in === 'true'){
        return next()
     }else{
